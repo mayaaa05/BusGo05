@@ -1,0 +1,28 @@
+{
+  "name": "online-bus-reservation",
+  "version": "1.0.0",
+  "description": "BusGo - Complete Online Bus Reservation System Full-Stack Application",
+  "scripts": {
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "start": "node server/server.js",
+    "postinstall": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "verify": "npm run verify --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\" --names \"SERVER,CLIENT\" --prefix-colors \"blue,green\""
+  },
+  "keywords": [
+    "bus-reservation",
+    "mern",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "BusGo Team",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
